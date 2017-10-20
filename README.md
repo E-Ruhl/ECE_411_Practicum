@@ -7,6 +7,12 @@ Check out these sites for getting an idea of what we might try
 https://www.adafruit.com/product/3538
 this is the IR Camera
 
+https://www.adafruit.com/product/684
+this is the OLED screen
+
+http://www.microchip.com/wwwproducts/en/ATmega328
+this is the microcontroller
+
 http://www.instructables.com/id/Arduino-Data-Glasses-for-My-Multimeter/
 This is an instructable for a DIY Heads up display that actually has decent documentation
 
