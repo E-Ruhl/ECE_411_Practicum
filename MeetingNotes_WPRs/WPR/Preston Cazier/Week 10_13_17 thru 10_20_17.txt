@@ -1,0 +1,26 @@
+from:			Preston Cazier <cpreston@pdx.edu>
+to:				Dustin, Eric, Kirk, 
+bcc: 			me 
+subject:	Weekly Progress Report Week 10/13/17 thru 10/20/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+0. Learned a medium amount of Github
+1. Began organizing the Wiki and Github repository
+2. Uploaded provided Practicum Requirements, and yes there is a PCB Size limit/requirement
+3. Found some useful material on AVR/Bare metal programming
+https://electronics.stackexchange.com/questions/246641/programming-blank-atmega328-microcontroller
+https://www.reddit.com/r/ECE/comments/2w2row/beginner_projects_for_learning_embedded_c_using/
+https://www.youtube.com/watch?v=GWKFfCpGae4    - I apologize, this method requires an Eclipse based program on windows
+4. Read through provided libraries and datasheets
+
+Goals For the Coming Week:
+--------------------------------------------------
+0. Finalize algorithms for image processing
+1. Test AVR/Bare metal programming
+2. Close out Issue 4
+3. Generate an test program that takes info from Thermal Camera and outputs to OLED using a bare metal approach
+
+Issues:
+--------------------------------------------------
+None found as of yet
