@@ -129,6 +129,7 @@ void setup(void) {
   delay(500);
   
   testtriangles();
+
   delay(500);
 
   bool status;
@@ -174,6 +175,8 @@ void loop() {
 
   float dest_2d[INTERPOLATED_ROWS * INTERPOLATED_COLS];
 
+  interpolate_image(pixels, AMG_ROWS, AMG_COLS, dest_2d, INTERPOLATED_ROWS, INTERPOLATED_COLS);
+  
   for (int i = 0; i < INTERPOLATED_ROWS; i++)
   {
     for (int j = 0; j < INTERPOLATED_COLS; j++)
@@ -183,8 +186,6 @@ void loop() {
     }
     Serial.println("");
   }
-
-  interpolate_image(pixels, AMG_ROWS, AMG_COLS, dest_2d, INTERPOLATED_ROWS, INTERPOLATED_COLS);
   
   drawpixels(dest_2d, INTERPOLATED_ROWS, INTERPOLATED_COLS);
 
