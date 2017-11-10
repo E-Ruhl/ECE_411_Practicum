@@ -142,13 +142,13 @@ void loop() {
 
   for(int i = 0; i < 64; i++)
   {
-    nearestNeighbor(i);
+    nearestNeighbor(i, true);
   }
   
   delay(100);
 }
 
-void nearestNeighbor(uint8_t index)
+void nearestNeighbor(uint8_t index, bool showVal)
 {
   float temp = pixels[index];
   uint8_t x = 2 * (index / 8)+40;
@@ -162,6 +162,12 @@ void nearestNeighbor(uint8_t index)
       float midTemp = average(temp, temp2, 2);
       i = midTemp*2 + 41;
       display.drawPixel(x, y + 1, colors[i]);
+      
+      if (showVal)
+      {
+        Serial.println(midTemp);
+        Serial.print(" ");
+      }
     }
     else if (index >= 56 && index <= 62)
     {
@@ -169,6 +175,12 @@ void nearestNeighbor(uint8_t index)
       float midTemp = average(temp, temp2, 2);
       i = midTemp*2 + 41;
       display.drawPixel(x + 1, y, colors[i]);
+      
+      if (showVal)
+      {
+        Serial.print(midTemp);
+        Serial.print(" ");
+      }
     }
     else
     {
@@ -178,6 +190,11 @@ void nearestNeighbor(uint8_t index)
       float mid = average(temp, corner, 2);
       i = mid*2 + 41;
       display.drawPixel(x+1, y, colors[i]);
+      if (showVal)
+      {
+        Serial.print(mid);
+        Serial.print(" ");
+      }
       total += mid + corner;
       
       float corner2 = pixels[index * 8 + 1];
@@ -191,15 +208,30 @@ void nearestNeighbor(uint8_t index)
       mid = average(temp, corner, 2);
       i = mid*2 + 41;
       display.drawPixel(x, y+1, colors[i]);
+      if (showVal)
+      {
+        Serial.print(mid);
+        Serial.print(" ");
+      }
       total += mid;
       
       mid = average(total, 0, 8);
       i = mid*2 + 41;
       display.drawPixel(x+1, y+1, colors[i]);
+      if (showVal)
+      {
+        Serial.print(mid);
+        Serial.print(" ");
+      }
     }
   }
   i = temp*2 + 41;
   display.drawPixel(x, y, colors[i]);
+
+  if (showVal)
+  {
+    Serial.println(temp);
+  }
 }
 
 float average(float a, float b, float d)
