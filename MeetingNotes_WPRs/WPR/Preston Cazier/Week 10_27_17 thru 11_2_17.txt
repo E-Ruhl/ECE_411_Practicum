@@ -1,0 +1,23 @@
+from:			Preston Cazier <cpreston@pdx.edu>
+to:				Dustin, Eric, Kirk, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 10/27/17 thru 11/2/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+Complelete final schematic:
+	0. review final schematic related to Microprocessor
+	
+Complelete design layout:
+	0. Create preliminary layout
+	1. Review preliminary layout
+
+Goals For the Coming Week:
+--------------------------------------------------
+Complelete design layout:
+	0. Review final layout
+	0. Create final layout
+	
+Issues:
+--------------------------------------------------
+None found as of yet
