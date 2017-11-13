@@ -1,0 +1,23 @@
+from:			Dustin Schnelle <schnelle@pdx.edu>
+to:				Preston, Eric, Kirk, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 10/20/17 thru 10/26/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+Complete preliminary schematic
+	0. review preliminary schematic
+Coding design
+	0. Review thermal imaging camera library
+	1. Review processor manual related to SPI
+
+Goals For the Coming Week:
+--------------------------------------------------
+Complelete final schematic:
+	0.review final schematic related to thermal camera
+Complelete design layout:
+	0.Review preliminary layout
+
+Issues:
+--------------------------------------------------
+None found as of yet
