@@ -1,0 +1,28 @@
+from:			Kirk Hooper <khoop2@pdx.edu>
+to:				Preston, Eric, Dustin, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 11/3/17 thru 11/9/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+Complelete design layout:
+	0. Review final layout
+
+Complete design measurements:
+	0. Draw high level block diagram
+	1. Review high level block diagram
+	2. Draw next-level block diagram
+	3. Review next-level block diagram
+	4. Create top-level block diagram of each module in next-level block diagram
+	5. Review top-level block diagram
+
+Goals For the Coming Week:
+--------------------------------------------------
+AVR Programming:
+	0. Coding through Arduino controller
+	1. Coding with the circuit
+	2. Build ISPC using QTFP adapter
+	
+Issues:
+--------------------------------------------------
+None found as of yet
