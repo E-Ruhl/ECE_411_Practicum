@@ -1,0 +1,21 @@
+from:			Eric Ruhl <eruhl@pdx.edu>
+to:				Preston, Dustin, Kirk, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 10/6/17 thru 10/12/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+Product development process:
+	0. Setup Wiki for the pacticum project
+
+Goals For the Coming Week:
+--------------------------------------------------
+Product development process:
+	0. review preliminary system design
+	
+Develop project requirements document
+    0. Develop project requirements related to power and design
+
+Issues:
+--------------------------------------------------
+None found as of yet

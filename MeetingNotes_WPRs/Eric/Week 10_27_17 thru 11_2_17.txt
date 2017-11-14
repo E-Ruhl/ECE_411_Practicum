@@ -1,0 +1,27 @@
+from:			Eric Ruhl <eruhl@pdx.edu>
+to:				Preston, Dustin, Kirk, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 10/27/17 thru 11/2/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+Complelete final schematic:
+	0. Design test points and indicator lights
+	1. Create final schematic
+	
+Complelete design layout
+	0. Create preliminary layout
+	1. Review preliminary layout
+    
+Goals For the Coming Week:
+--------------------------------------------------
+Complelete design layout:
+	0. Create final layout
+	1. Review final layout
+	
+Complete design measurements:
+	0. Review top-level block diagram
+	
+Issues:
+--------------------------------------------------
+None found as of yet
