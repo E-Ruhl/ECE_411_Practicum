@@ -1,0 +1,30 @@
+from:			Eric Ruhl <eruhl@pdx.edu>
+to:				Preston, Dustin, Kirk, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 10/20/17 thru 10/26/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+Complete preliminary schematic:
+	0. Determine what needs to be included on fabricated board
+	1. Create the preliminary schematic
+	2. review preliminary schematic
+	
+Design battery supply
+	0. Determine type of power supply to use
+	1. Develop protections
+	2. Implement the design in the circuit
+    
+Goals For the Coming Week:
+--------------------------------------------------
+Complelete final schematic:
+	0. Design test points and indicator lights
+	1. Create final schematic
+	
+Complelete design layout
+	0. Create preliminary layout
+	1. Review preliminary layout
+	
+Issues:
+--------------------------------------------------
+None found as of yet

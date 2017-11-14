@@ -1,0 +1,23 @@
+from:			Kirk Hooper <khoop2@pdx.edu>
+to:				Preston, Eric, Dustin, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 10/13/17 thru 10/19/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+Product development process:
+	0. I reviewed preliminary system design as it relates to my assigned parts
+Develop project requirements document
+	0. I developed all project requirements related to OLED screen
+
+Goals For the Coming Week:
+--------------------------------------------------
+Complete preliminary schematic
+	0. review preliminary schematic
+Coding design
+	0. Review OLED screen library library
+	1. Review processor manual related to SPI
+
+Issues:
+--------------------------------------------------
+None found as of yet
