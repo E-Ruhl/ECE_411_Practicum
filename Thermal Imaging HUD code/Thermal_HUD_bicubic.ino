@@ -187,11 +187,18 @@ void drawpixels(uint8_t *p, uint8_t rows, uint8_t cols) {
   int colorTemp;
   for (int y = 0; y < rows; y++) {
     for (int x = 0; x < cols; x++) {
-      uint8_t val = get_point(p, rows, cols, x, y);
-      if(val >= MAXTEMP) val = MAXTEMP;
-      else if(val <= MINTEMP) val = MINTEMP;
+      // uncomment to select a method for translating to color
       
-      uint8_t colorIndex = map(val, MINTEMP, MAXTEMP, 40, 200);
+      // main method
+      //uint8_t colorIndex = get_point(p, rows, cols, x, y) * 2 + 41;
+      
+      // secondary method that yields a slightly more yellow color range
+      //uint8_t val = get_point(p, rows, cols, x, y);
+      //if(val >= MAXTEMP) val = MAXTEMP;
+      //else if(val <= MINTEMP) val = MINTEMP;
+      //uint8_t colorIndex = map(val, MINTEMP, MAXTEMP, 0, 203);    // yields all colors
+      //uint8_t colorIndex = map(val, MINTEMP, MAXTEMP, 40, 200);   // yields high reduced set
+      //uint8_t colorIndex = map(val, MINTEMP, MAXTEMP, 20, 160);   // yields low reduced set
 
       display.drawPixel(x + XOFF, y + YOFF, colors[colorIndex]);
     }
