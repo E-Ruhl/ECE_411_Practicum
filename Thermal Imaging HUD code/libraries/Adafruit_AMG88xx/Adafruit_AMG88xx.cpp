@@ -39,7 +39,7 @@ float Adafruit_AMG88xx::readThermistor()
 	return signedMag12ToFloat(recast) * AMG88xx_THERMISTOR_CONVERSION;
 }
 
-void Adafruit_AMG88xx::readPixels(float *buf, uint8_t size)
+void Adafruit_AMG88xx::readPixels(int8_t *buf, uint8_t size)
 {
 	uint16_t recast;
 	float converted;
@@ -52,7 +52,7 @@ void Adafruit_AMG88xx::readPixels(float *buf, uint8_t size)
 		recast = ((uint16_t)rawArray[pos + 1] << 8) | ((uint16_t)rawArray[pos]);
 		
 		converted = signedMag12ToFloat(recast) * AMG88xx_PIXEL_TEMP_CONVERSION;
-		buf[i] = converted;
+		buf[i] = (int8_t) converted;
 	}
 }
 

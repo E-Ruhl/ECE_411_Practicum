@@ -86,7 +86,7 @@ class Adafruit_AMG88xx {
 		
 		bool begin(uint8_t addr = AMG88xx_ADDRESS);
 		
-		void readPixels(float *buf, uint8_t size = AMG88xx_PIXEL_ARRAY_SIZE);
+		void readPixels(int8_t *buf, uint8_t size = AMG88xx_PIXEL_ARRAY_SIZE);
 		float readThermistor();
 		
 		void	  disableInterrupt();
