@@ -75,8 +75,11 @@
 /*=========================================================================*/
 
 #define AMG88xx_PIXEL_ARRAY_SIZE 64
+#define bytesToRead AMG88xx_PIXEL_ARRAY_SIZE << 1
 #define AMG88xx_PIXEL_TEMP_CONVERSION .25
 #define AMG88xx_THERMISTOR_CONVERSION .0625
+#define MAXTEMP 80
+#define MINTEMP 0
 
 class Adafruit_AMG88xx {
 	public:
@@ -86,7 +89,7 @@ class Adafruit_AMG88xx {
 		
 		bool begin(uint8_t addr = AMG88xx_ADDRESS);
 		
-		void readPixels(int8_t *buf, uint8_t size = AMG88xx_PIXEL_ARRAY_SIZE);
+		void readPixels(int8_t *buf);
 		float readThermistor();
 		
 		void	  disableInterrupt();

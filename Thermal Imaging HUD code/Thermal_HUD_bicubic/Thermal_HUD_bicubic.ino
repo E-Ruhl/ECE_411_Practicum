@@ -183,21 +183,33 @@ void loop() {
   //delay(50);
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 void drawpixels(uint8_t *p, uint8_t rows, uint8_t cols) {
   int colorTemp;
   for (int y = 0; y < rows; y++) {
     for (int x = 0; x < cols; x++) {
       uint8_t val = get_point(p, rows, cols, x, y);
-      if(val >= MAXTEMP) val = MAXTEMP;
-      else if(val <= MINTEMP) val = MINTEMP;
+      //if(val >= MAXTEMP) val = MAXTEMP;
+      //else if(val <= MINTEMP) val = MINTEMP;
       
-      uint8_t colorIndex = map(val, MINTEMP, MAXTEMP, 40, 200);
-
+      //uint8_t colorIndex = map(val, MINTEMP, MAXTEMP, 40, 203);
+      uint8_t colorIndex = 2*val + 41;
       display.drawPixel(x + XOFF, y + YOFF, colors[colorIndex]);
     }
   }
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 void testdrawtext(char *text, uint16_t color)
 {
   display.setTextSize(1);
@@ -218,6 +230,12 @@ void testdrawtext(char *text, uint16_t color)
   }
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 void testfastlines(uint16_t color1, uint16_t color2)
 {
   display.fillScreen(BLACK);
@@ -231,6 +249,12 @@ void testfastlines(uint16_t color1, uint16_t color2)
   }
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 void testtriangles()
 {
   display.fillScreen(BLACK);
@@ -250,6 +274,12 @@ void testtriangles()
   }
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 uint8_t get_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
   if (x < 0)        x = 0;
   if (y < 0)        y = 0;
@@ -258,12 +288,24 @@ uint8_t get_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
   return p[y * cols + x];
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 void set_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y, float f) {
   if ((x < 0) || (x >= cols)) return;
   if ((y < 0) || (y >= rows)) return;
   p[y * cols + x] = (uint8_t)f;
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 // src is a grid src_rows * src_cols
 // dest is a pre-allocated grid, dest_rows*dest_cols
 void interpolate_image(uint8_t *src, uint8_t src_rows, uint8_t src_cols, 
@@ -296,6 +338,12 @@ void interpolate_image(uint8_t *src, uint8_t src_rows, uint8_t src_cols,
   }
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 // p is a list of 4 points, 2 to the left, 2 to the right
 float cubicInterpolate(float p[], float x) {
     float r = p[1] + (0.5 * x * (p[2] - p[0] + x*(2.0*p[0] - 5.0*p[1] + 4.0*p[2] - p[3] + x*(3.0*(p[1] - p[2]) + p[3] - p[0]))));
@@ -310,6 +358,12 @@ float cubicInterpolate(float p[], float x) {
     return r;
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 // p is a 16-point 4x4 array of the 2 rows & columns left/right/above/below
 float bicubicInterpolate(float p[], float x, float y) {
     float arr[4] = {0,0,0,0};
@@ -320,6 +374,12 @@ float bicubicInterpolate(float p[], float x, float y) {
     return cubicInterpolate(arr, y);
 }
 
+/*---------------------------------------------------------
+ * Function:
+ * Inputs:
+ * Outputs:
+ * Description:
+ ---------------------------------------------------------*/
 // src is rows*cols and dest is a 16-point array passed in already allocated!
 void get_adjacents_2d(uint8_t *src, float *dest, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
     Serial.print("("); Serial.print(x); Serial.print(", "); Serial.print(y); Serial.println(")");

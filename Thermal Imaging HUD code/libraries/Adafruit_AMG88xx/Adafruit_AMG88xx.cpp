@@ -39,20 +39,33 @@ float Adafruit_AMG88xx::readThermistor()
 	return signedMag12ToFloat(recast) * AMG88xx_THERMISTOR_CONVERSION;
 }
 
-void Adafruit_AMG88xx::readPixels(int8_t *buf, uint8_t size)
+//void Adafruit_AMG88xx::readPixels(int8_t *buf)
+//{
+	//uint16_t recast;
+	//float converted;
+	//uint8_t rawArray[bytesToRead];
+	//this->read(AMG88xx_PIXEL_OFFSET, rawArray, bytesToRead);
+	
+	//for(int i=0; i<AMG88xx_PIXEL_ARRAY_SIZE; i++){
+		//uint8_t pos = i << 1;
+		//recast = ((uint16_t)rawArray[pos + 1] << 8) | ((uint16_t)rawArray[pos]);
+		
+		//converted = signedMag12ToFloat(recast) * AMG88xx_PIXEL_TEMP_CONVERSION;
+		//buf[i] = (int8_t) converted;
+	//}
+//}
+
+void Adafruit_AMG88xx::readPixels(int8_t *buf)
 {
-	uint16_t recast;
-	float converted;
-	uint8_t bytesToRead = min(size << 1, AMG88xx_PIXEL_ARRAY_SIZE << 1);
-	uint8_t rawArray[bytesToRead];
 	this->read(AMG88xx_PIXEL_OFFSET, rawArray, bytesToRead);
 	
-	for(int i=0; i<size; i++){
+	for(int i=0; i<AMG88xx_PIXEL_ARRAY_SIZE; i++){
 		uint8_t pos = i << 1;
-		recast = ((uint16_t)rawArray[pos + 1] << 8) | ((uint16_t)rawArray[pos]);
+		recast = (((uint16_t)rawArray[pos + 1] << 8) | ((uint16_t)rawArray[pos])) >> 2;
+		if (recast > MAXTEMP) recast = MAXTEMP;
+		else if (recast < MINTEMP) recast = MINTEMP;
 		
-		converted = signedMag12ToFloat(recast) * AMG88xx_PIXEL_TEMP_CONVERSION;
-		buf[i] = (int8_t) converted;
+		buf[i] = 
 	}
 }
 
