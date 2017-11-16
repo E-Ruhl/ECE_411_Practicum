@@ -20,51 +20,56 @@
     -----------------------------------------------------------------------*/
     enum
     {
-        AMG88xx_PCTL = 0x00,
-		AMG88xx_RST = 0x01,
-		AMG88xx_FPSC = 0x02,
-		AMG88xx_INTC = 0x03,
-		AMG88xx_STAT = 0x04,
-		AMG88xx_SCLR = 0x05,
+        AMG88xx_PCTL = 0x00, //Set operating mode (Normal, Sleep, ect)
+		AMG88xx_RST = 0x01, //Software reset
+		AMG88xx_FPSC = 0x02, //Frame rate
+		AMG88xx_INTC = 0x03, //Interrupt function
+		AMG88xx_STAT = 0x04, //Interrupt flag low voltage
+		AMG88xx_SCLR = 0x05, //Interrupt Flag Clear
 		//0x06 reserved
-		AMG88xx_AVE = 0x07,
-		AMG88xx_INTHL = 0x08,
-		AMG88xx_INTHH = 0x09,
-		AMG88xx_INTLL = 0x0A,
-		AMG88xx_INTLH = 0x0B,
-		AMG88xx_IHYSL = 0x0C,
-		AMG88xx_IHYSH = 0x0D,
-		AMG88xx_TTHL = 0x0E,
-		AMG88xx_TTHH = 0x0F,
-		AMG88xx_INT_OFFSET = 0x010,
-		AMG88xx_PIXEL_OFFSET = 0x80
+		AMG88xx_AVE = 0x07, //Moving average output
+		AMG88xx_INTHL = 0x08, //Interrupt upper value (Lower level)
+		AMG88xx_INTHH = 0x09, //Interrupt upper value (Upper level)
+		AMG88xx_INTLL = 0x0A, //Interrupt lower value (Lower level)
+		AMG88xx_INTLH = 0x0B, //Interrupt lower value (Upper level)
+		AMG88xx_IHYSL = 0x0C, //Interrupt hysteresis value (Lower level)
+		AMG88xx_IHYSH = 0x0D, //Interrupt hysteresis value (Upper level)
+		AMG88xx_TTHL = 0x0E, //Thermistor output value (Lower level)
+		AMG88xx_TTHH = 0x0F, //Thermistor output value (Upper level)
+		AMG88xx_INT_OFFSET = 0x010, //Pixel interrupt result offset
+		AMG88xx_PIXEL_OFFSET = 0x80 //Pixel output value offset 
     };
 	
+	//Power control commands
 	enum power_modes{
-		AMG88xx_NORMAL_MODE = 0x00,
-		AMG88xx_SLEEP_MODE = 0x01,
-		AMG88xx_STAND_BY_60 = 0x20,
-		AMG88xx_STAND_BY_10 = 0x21
+		AMG88xx_NORMAL_MODE = 0x00, //Normal mode
+		AMG88xx_SLEEP_MODE = 0x01, //Sleep mode
+		AMG88xx_STAND_BY_60 = 0x20, //Stand-by (60 sec)
+		AMG88xx_STAND_BY_10 = 0x21 //Stand-by (10 sec)
 	};
 	
+	//Reset commands
 	enum sw_resets {
-		AMG88xx_FLAG_RESET = 0x30,
-		AMG88xx_INITIAL_RESET = 0x3F
+		AMG88xx_FLAG_RESET = 0x30, //Flag reset
+		AMG88xx_INITIAL_RESET = 0x3F //Initial reset
 	};
 	
+	//Frame rate commands 
 	enum frame_rates {
-		AMG88xx_FPS_10 = 0x00,
-		AMG88xx_FPS_1 = 0x01
+		AMG88xx_FPS_10 = 0x00, //10 frames per second
+		AMG88xx_FPS_1 = 0x01 //1 frame per second
 	};
 	
+	//Inerrupt enable commands
 	enum int_enables{
-		AMG88xx_INT_DISABLED = 0x00,
-		AMG88xx_INT_ENABLED = 0x01
+		AMG88xx_INT_DISABLED = 0x00, //INT output reactive (Hi-Z)
+		AMG88xx_INT_ENABLED = 0x01 //INT output active
 	};
 	
+	//Interrupt mode commands
 	enum int_modes {
-		AMG88xx_DIFFERENCE = 0x00,
-		AMG88xx_ABSOLUTE_VALUE = 0x01
+		AMG88xx_DIFFERENCE = 0x00, //Difference interrupt mode
+		AMG88xx_ABSOLUTE_VALUE = 0x01 //Absolute value interrupt mode
 	};
 	
 /*=========================================================================*/
@@ -81,23 +86,11 @@ class Adafruit_AMG88xx {
 		
 		bool begin(uint8_t addr = AMG88xx_ADDRESS);
 		
-		void readPixels(float *buf, uint8_t size = AMG88xx_PIXEL_ARRAY_SIZE);
+		void readPixels(int8_t *buf, uint8_t size = AMG88xx_PIXEL_ARRAY_SIZE);
 		float readThermistor();
 		
-		void setMovingAverageMode(bool mode);
-		
-		void	  enableInterrupt();
 		void	  disableInterrupt();
-		void	  setInterruptMode(uint8_t mode);
-		void	  getInterrupt(uint8_t *buf, uint8_t size = 8);
-		void	  clearInterrupt();
-				
-		//this will automatically set hysteresis to 95% of the high value
-		void	  setInterruptLevels(float high, float low);
-				
-		//this will manually set hysteresis
-		void	  setInterruptLevels(float high, float low, float hysteresis);
-		
+
 	private:
 		uint8_t _i2caddr;
 		
