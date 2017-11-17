@@ -1,0 +1,22 @@
+from:			Dustin Schnelle <schnelle@pdx.edu>
+to:				Preston, Eric, Kirk, 
+bcc: 			me 
+subject:	   Weekly Progress Report Week 11/3/17 thru 11/9/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+AVR Programming:
+	0. Coding through Arduino controller
+	1. Coding with the circuit
+	2. Build ISPC using QTFP adapter
+
+Goals For the Coming Week:
+--------------------------------------------------
+	0. Clean-up unused code
+	1. Eliminate any unused procedures and functions
+	2. Create condenced color mapping for temps read from thermal camera
+	
+Issues:
+	0. Responce time of the display is delayed
+--------------------------------------------------
+None found as of yet
