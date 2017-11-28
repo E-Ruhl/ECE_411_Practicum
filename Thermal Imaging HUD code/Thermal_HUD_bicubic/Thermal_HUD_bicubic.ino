@@ -40,27 +40,25 @@
 
 // see if a bit code x86 proc code cant be used to create an array of defines or a #defined array, ie get colors to take up flash not dynamic
 const uint16_t colors[] = {
-  0x0000, 0x0801, 0x1002, 0x1803, 0x1803, 0x2004, 0x2805, 0x3006, 0x3006, 0x3807,
-  0x4008, 0x4809, 0x4809, 0x500A, 0x580B, 0x600C, 0x600C, 0x580C, 0x580C, 0x500C,
-  0x480C, 0x400C, 0x400C, 0x380C, 0x300C, 0x280C, 0x280C, 0x200C, 0x180C, 0x100C,
-  0x100C, 0x080C, 0x000C, 0x000C, 0x000D, 0x000E, 0x000E, 0x000F, 0x0010, 0x0011,
-  0x0011, 0x0012, 0x0013, 0x0014, 0x0014, 0x0015, 0x0016, 0x0017, 0x0017, 0x0018,
-  0x0019, 0x001A, 0x001A, 0x001B, 0x001C, 0x001D, 0x001D, 0x001E, 0x001F, 0x001F,
-  0x003F, 0x007F, 0x009F, 0x00DF, 0x00FF, 0x013F, 0x015F, 0x019F, 0x019F, 0x01BF,
-  0x01FF, 0x021F, 0x025F, 0x027F, 0x02BF, 0x02DF, 0x031F, 0x033F, 0x037F, 0x039F,
-  0x03FF, 0x045F, 0x04BF, 0x051F, 0x057F, 0x05DF, 0x063F, 0x069F, 0x06FF, 0x075F,
-  0x07BF, 0x07FF, 0x07FE, 0x07FC, 0x07FB, 0x07F9, 0x07F8, 0x07F6, 0x07F5, 0x07F3,
-  0x07F2, 0x07F0, 0x07EF, 0x07ED, 0x07EC, 0x07EA, 0x07E9, 0x07E7, 0x07E6, 0x07E4,
-  0x07E3, 0x07E1, 0x07E0, 0x0FE0, 0x1FE0, 0x27E0, 0x37E0, 0x3FE0, 0x4FE0, 0x57E0,
-  0x67E0, 0x6FE0, 0x7FE0, 0x87E0, 0x97E0, 0x9FE0, 0xAFE0, 0xB7E0, 0xC7E0, 0xCFE0,
-  0xDFE0, 0xE7E0, 0xF7E0, 0xFFE0, 0xFF80, 0xFF20, 0xFEC0, 0xFE60, 0xFE00, 0xFDA0,
-  0xFD40, 0xFCE0, 0xFC80, 0xFC20, 0xFBC0, 0xFB60, 0xFB00, 0xFAA0, 0xFA40, 0xF9E0,
-  0xF980, 0xF920, 0xF8C0, 0xF860, 0xF800, 0xF820, 0xF841, 0xF861, 0xF8A2, 0xF8C3,
-  0xF8E3, 0xF904, 0xF945, 0xF965, 0xF986, 0xF9A6, 0xF9E7, 0xFA08, 0xFA28, 0xFA49,
-  0xFA8A, 0xFAAA, 0xFACB, 0xFAEB, 0xFB2C, 0xFB4D, 0xFB6D, 0xFB8E, 0xFBCF, 0xFBEF,
-  0xFC10, 0xFC30, 0xFC71, 0xFCD3, 0xFD14, 0xFD34, 0xFD55, 0xFD75, 0xFDB6, 0xFDD7,
-  0xFDF7, 0xFE18, 0xFE59, 0xFE79, 0xFE9A, 0xFEBA, 0xFEFB, 0xFF1C, 0xFF3C, 0xFF5D,
-  0xFF9E, 0xFFBE, 0xFFDF, 0xFFFF,
+  0x0000, 0x0801, 0x1002, 0x1803, 0x2004, 0x2805, 0x3006, 0x3807, 0x4008, 0x4809,
+  0x500A, 0x580B, 0x600C, 0x580C, 0x500C, 0x480C, 0x400C, 0x380C, 0x300C, 0x280C,
+  0x200C, 0x180C, 0x100C, 0x080C, 0x000C, 0x000D, 0x000E, 0x000F, 0x0010, 0x0011,
+  0x0012, 0x0013, 0x0014, 0x0015, 0x0016, 0x0017, 0x0018, 0x0019, 0x001A, 0x001B,
+  0x001C, 0x001D, 0x001E, 0x001F, 0x003F, 0x007F, 0x009F, 0x00DF, 0x00FF, 0x013F,
+  0x015F, 0x019F, 0x01BF, 0x01FF, 0x021F, 0x025F, 0x027F, 0x02BF, 0x02DF, 0x031F,
+  0x033F, 0x037F, 0x039F, 0x03FF, 0x045F, 0x051F, 0x057F, 0x05DF, 0x063F, 0x069F,
+  0x06FF, 0x075F, 0x07BF, 0x07FF, 0x07FE, 0x07FC, 0x07FB, 0x07F9, 0x07F8, 0x07F6,
+  0x07F5, 0x07F3, 0x07F2, 0x07F0, 0x07EF, 0x07ED, 0x07EC, 0x07EA, 0x07E9, 0x07E7,
+  0x07E6, 0x07E4, 0x07E3, 0x07E1, 0x07E0, 0x0FE0, 0x1FE0, 0x27E0, 0x37E0, 0x3FE0,
+  0x4FE0, 0x57E0, 0x67E0, 0x6FE0, 0x7FE0, 0x87E0, 0x97E0, 0x9FE0, 0xAFE0, 0xB7E0,
+  0xC7E0, 0xCFE0, 0xDFE0, 0xE7E0, 0xF7E0, 0xFFE0, 0xFF80, 0xFF20, 0xFEC0, 0xFE60,
+  0xFE00, 0xFDA0, 0xFD40, 0xFCE0, 0xFC80, 0xFC20, 0xFBC0, 0xFB60, 0xFB00, 0xFAA0,
+  0xFA40, 0xF9E0, 0xF980, 0xF920, 0xF8C0, 0xF860, 0xF800, 0xF820, 0xF841, 0xF861,
+  0xF8A2, 0xF8C3, 0xF8E3, 0xF904, 0xF945, 0xF965, 0xF986, 0xF9A6, 0xF9E7, 0xFA08,
+  0xFA28, 0xFA49, 0xFA8A, 0xFAAA, 0xFACB, 0xFAEB, 0xFB2C, 0xFB4D, 0xFB6D, 0xFB8E,
+  0xFBCF, 0xFBEF, 0xFC10, 0xFC30, 0xFC71, 0xFCD3, 0xFD14, 0xFD34, 0xFD55, 0xFD75,
+  0xFDB6, 0xFDD7, 0xFDF7, 0xFE18, 0xFE59, 0xFE79, 0xFE9A, 0xFEBA, 0xFEFB, 0xFF1C,
+  0xFF3C, 0xFF5D, 0xFF9E, 0xFFBE, 0xFFDF, 0xFFFF,
 };
 
 #define AMG_COLS 8
@@ -85,9 +83,9 @@ const uint16_t colors[] = {
 #define RED             0xF800
 #define WHITE           0xFFFF
 
-uint8_t get_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y);
+uint8_t get_point(int8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y);
 void set_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y, float f);
-void get_adjacents_2d(uint8_t *src, float *dest, uint8_t rows, uint8_t cols, int8_t x, int8_t y);
+void get_adjacents_2d(int8_t *src, float *dest, uint8_t rows, uint8_t cols, int8_t x, int8_t y);
 float cubicInterpolate(float p[], float x);
 float bicubicInterpolate(float p[], float x, float y);
 void interpolate_image(uint8_t *src, uint8_t src_rows, uint8_t src_cols,
@@ -137,9 +135,10 @@ void setup(void) {
   display.fillScreen(BLACK);
   delay(1000);
 
-  //for (int i = 0; i < 202; i++)
+  //for (int i = 165; i < 170; i++)
   //{
     //Serial.println(colors[i], HEX);
+    //display.fillScreen(colors[i]);
   //}
 
   //for (int i = 0; i < 200; i++)
@@ -184,9 +183,13 @@ void loop() {
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: drawpixels
  * Inputs:
+ *      uint8_t *p:
+ *      uint8_t rows:
+ *      uint8_t cols:
  * Outputs:
+ *      void (none)
  * Description:
  ---------------------------------------------------------*/
 void drawpixels(uint8_t *p, uint8_t rows, uint8_t cols) {
@@ -205,9 +208,12 @@ void drawpixels(uint8_t *p, uint8_t rows, uint8_t cols) {
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: testdrawtext
  * Inputs:
+ *      char *text:
+ *      uint16_t color:
  * Outputs:
+ *      void (none)
  * Description:
  ---------------------------------------------------------*/
 void testdrawtext(char *text, uint16_t color)
@@ -231,9 +237,12 @@ void testdrawtext(char *text, uint16_t color)
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: testfastlines
  * Inputs:
+ *      uint16_t:
+ *      uint16_t:
  * Outputs:
+ *      void (none)
  * Description:
  ---------------------------------------------------------*/
 void testfastlines(uint16_t color1, uint16_t color2)
@@ -250,9 +259,11 @@ void testfastlines(uint16_t color1, uint16_t color2)
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: testtriangles
  * Inputs:
+ *      (none)
  * Outputs:
+ *      (void)
  * Description:
  ---------------------------------------------------------*/
 void testtriangles()
@@ -275,12 +286,18 @@ void testtriangles()
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: get_point
  * Inputs:
+ *      int8_t *p:
+ *      uint8_t rows:
+ *      uint8_t cols:
+ *      uint8_t x:
+ *      uint8_t y:
  * Outputs:
+ *      uint8_t:
  * Description:
  ---------------------------------------------------------*/
-uint8_t get_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
+uint8_t get_point(int8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
   if (x < 0)        x = 0;
   if (y < 0)        y = 0;
   if (x >= cols)    x = cols - 1;
@@ -289,9 +306,16 @@ uint8_t get_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: set_point
  * Inputs:
+ *      uint8_t *p:
+ *      uint8_t rows:
+ *      uint8_t cols:
+ *      int8_t x:
+ *      int8_t y:
+ *      float f:
  * Outputs:
+ *      void (none)
  * Description:
  ---------------------------------------------------------*/
 void set_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y, float f) {
@@ -301,9 +325,16 @@ void set_point(uint8_t *p, uint8_t rows, uint8_t cols, int8_t x, int8_t y, float
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: interpolate_image
  * Inputs:
+ *      int8_t *src:
+ *      uint8_t src_rows:
+ *      uint8_t src_cols:
+ *      uint8_t *dest:
+ *      uint8_t dest_rows:
+ *      uint8_t dest_cols:
  * Outputs:
+ *      void (none)
  * Description:
  ---------------------------------------------------------*/
 // src is a grid src_rows * src_cols
@@ -339,9 +370,12 @@ void interpolate_image(uint8_t *src, uint8_t src_rows, uint8_t src_cols,
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: cubicInterpolate
  * Inputs:
+ *      float p[]:
+ *      float x:
  * Outputs:
+ *      float:
  * Description:
  ---------------------------------------------------------*/
 // p is a list of 4 points, 2 to the left, 2 to the right
@@ -359,9 +393,13 @@ float cubicInterpolate(float p[], float x) {
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: bicubicInterpolate
  * Inputs:
+ *      float p[]:
+ *      float x:
+ *      float y:
  * Outputs:
+ *      float:
  * Description:
  ---------------------------------------------------------*/
 // p is a 16-point 4x4 array of the 2 rows & columns left/right/above/below
@@ -375,13 +413,20 @@ float bicubicInterpolate(float p[], float x, float y) {
 }
 
 /*---------------------------------------------------------
- * Function:
+ * Function: get_adjacent_2d
  * Inputs:
+ *      int8_t *src:
+ *      float *dest:
+ *      uint8_t rows:
+ *      uint8_t cols:
+ *      int8_t x:
+ *      int8_t y:
  * Outputs:
+ *      void (none)
  * Description:
  ---------------------------------------------------------*/
 // src is rows*cols and dest is a 16-point array passed in already allocated!
-void get_adjacents_2d(uint8_t *src, float *dest, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
+void get_adjacents_2d(int8_t *src, float *dest, uint8_t rows, uint8_t cols, int8_t x, int8_t y) {
     Serial.print("("); Serial.print(x); Serial.print(", "); Serial.print(y); Serial.println(")");
     float arr[4];
     for (int8_t delta_y = -1; delta_y < 3; delta_y++) { // -1, 0, 1, 2

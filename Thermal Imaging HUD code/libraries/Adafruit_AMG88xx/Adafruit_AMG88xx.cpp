@@ -30,15 +30,6 @@ void Adafruit_AMG88xx::disableInterrupt()
 	this->write8(AMG88xx_INTC, _intc.get());
 }
 
-float Adafruit_AMG88xx::readThermistor()
-{
-	uint8_t raw[2];
-	this->read(AMG88xx_TTHL, raw, 2);
-	uint16_t recast = ((uint16_t)raw[1] << 8) | ((uint16_t)raw[0]);
-
-	return signedMag12ToFloat(recast) * AMG88xx_THERMISTOR_CONVERSION;
-}
-
 //void Adafruit_AMG88xx::readPixels(int8_t *buf)
 //{
 	//uint16_t recast;
@@ -116,10 +107,3 @@ void Adafruit_AMG88xx::write(uint8_t reg, uint8_t *buf, uint8_t num)
 	Wire.endTransmission();
 }
 
-float Adafruit_AMG88xx::signedMag12ToFloat(uint16_t val)
-{
-	//take first 11 bits as absolute val
-	uint16_t absVal = (val & 0x7FF);
-	
-	return (val & 0x8000) ? 0 - (float)absVal : (float)absVal ;
-}
