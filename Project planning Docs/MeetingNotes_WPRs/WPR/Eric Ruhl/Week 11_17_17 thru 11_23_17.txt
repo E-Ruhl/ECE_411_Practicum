@@ -1,0 +1,24 @@
+from:Eric Ruhl <eruhl@pdx.edu>
+
+to:Preston, Dustin, Kirk
+bcc:me 
+
+subject: Weekly Progress Report Week 11/17/17 thru 11/23/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the
+
+Develop physical casings:
+	0. Measure alignment
+	1. Create OBJ files
+
+
+Develop optics for the heads-up display:
+	0. Create final structure
+	1. Develop and manufacture a test sturcture
+ 
+
+
+Goals For the Coming Week: Run full test on battery charging circuit and voltage regulation circuits. 
+Get constant power to the pads of the contoller
+
+Issues:Linear Regulators need to be changed to Low Drop Out
