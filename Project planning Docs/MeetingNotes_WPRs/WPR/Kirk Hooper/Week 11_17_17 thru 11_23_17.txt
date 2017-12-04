@@ -1,0 +1,17 @@
+from:			Kirk Hooper <khoop2@pdx.edu>
+to:			Preston, Eric, Dustin, 
+bcc: 			me 
+subject:	    	Weekly Progress Report Week 11/17/17 thru 11/23/17: Practicum Project, Thermal Imaging HUD
+
+Accomplishments From the Week:
+--------------------------------------------------
+AVR Programming:
+	0. Continued coding through Arduino controller
+	1. Preparing / editing test plan documentation
+
+Goals For the Coming Week:
+--------------------------------------------------
+	
+Issues:
+--------------------------------------------------
+None found as of yet
