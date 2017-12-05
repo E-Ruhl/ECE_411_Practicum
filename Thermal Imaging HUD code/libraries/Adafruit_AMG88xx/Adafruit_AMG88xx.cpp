@@ -48,7 +48,9 @@ void Adafruit_AMG88xx::disableInterrupt()
 
 void Adafruit_AMG88xx::readPixels(int8_t *buf)
 {
+	uint8_t rawArray[bytesToRead];
 	this->read(AMG88xx_PIXEL_OFFSET, rawArray, bytesToRead);
+	uint16_t recast;
 	
 	for(int i=0; i<AMG88xx_PIXEL_ARRAY_SIZE; i++){
 		uint8_t pos = i << 1;
@@ -56,7 +58,7 @@ void Adafruit_AMG88xx::readPixels(int8_t *buf)
 		if (recast > MAXTEMP) recast = MAXTEMP;
 		else if (recast < MINTEMP) recast = MINTEMP;
 		
-		buf[i] = 
+		buf[i] = recast;
 	}
 }
 
