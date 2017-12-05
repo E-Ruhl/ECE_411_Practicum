@@ -202,7 +202,7 @@ void drawpixels(uint8_t *p, uint8_t rows, uint8_t cols) {
       
       //uint8_t colorIndex = map(val, MINTEMP, MAXTEMP, 40, 203);
       uint8_t colorIndex = 2*val + 41;
-      display.drawPixel(x + XOFF, y + YOFF, colors[colorIndex]);
+      display.drawPixel(y + YOFF, x + XOFF, colors[colorIndex]);
     }
   }
 }
